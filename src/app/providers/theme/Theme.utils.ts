@@ -13,7 +13,7 @@ export const useTheme = ():IUseThemeResult => {
         const newTheme = theme === ETheme.light ? ETheme.dark : ETheme.light
         setTheme(newTheme)
         localStorage.setItem(LOCAL_STORAGE_THEME_KEY, newTheme)
-    } 
+    }
 
     return {
         theme,

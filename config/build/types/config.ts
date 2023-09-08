@@ -3,9 +3,9 @@ export type TBuildMode = 'production' | 'development'
 export interface TBuildPath {
     entry: string;
     build: string;
-    html: string; 
+    html: string;
     src: string;
-} 
+}
 
 export interface IBuildOptions {
     mode: TBuildMode,

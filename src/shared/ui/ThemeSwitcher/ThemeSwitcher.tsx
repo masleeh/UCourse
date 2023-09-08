@@ -16,6 +16,10 @@ const ThemeSwitcher = ({
         theme,
         toggleTheme
     } = useTheme()
+
+
+
+    
     
     return (
         <button 
