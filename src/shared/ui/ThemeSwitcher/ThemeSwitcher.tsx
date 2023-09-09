@@ -16,17 +16,15 @@ const ThemeSwitcher = ({
         theme,
         toggleTheme
     } = useTheme()
-
-
-
-    
     
     return (
         <button 
             onClick={toggleTheme} 
             className={classNames(style.ThemeSwitcher, {}, [className, style[theme]])}
         >
-            {theme === "dark" ? <DarkThemeIcon width={25} height={25}/> : <LightThemeIcon width={25} height={25}/>}
+            {theme === "dark" ? 
+                <DarkThemeIcon width={25} height={25}/> 
+                : <LightThemeIcon width={25} height={25}/>}
         </button>
     )
 }

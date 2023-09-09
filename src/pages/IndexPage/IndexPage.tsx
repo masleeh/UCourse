@@ -1,7 +1,11 @@
+import { BugButton } from "app/providers/ErrorBoundary"
 
 const IndexPage = () => {
     return (
-        <div>INDEX PAGE</div>
+        <div>
+            <BugButton />
+            INDEX PAGE
+        </div>
     )
 }
 

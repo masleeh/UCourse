@@ -1,4 +1,7 @@
 {
-    "Main": "Main",
-    "About": "About"
+  "link-main": "Main",
+  "link-about": "About",
+  "page-not-found": "Page not found",
+  "app-error-page": "Unexpected error just happened.",
+  "refresh-page": "Refresh page"
 }
