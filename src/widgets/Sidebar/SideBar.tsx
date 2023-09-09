@@ -20,7 +20,7 @@ const SideBar = ({
 
     return (
         <div className={classNames(style.SideBar, {[style.collapsed]: collapsed}, [className])}>
-            <Button onClick={onToggle}>Toggle</Button>
+            <Button onClick={onToggle}>123</Button>
             <div className={style.switchers}>
                 <ThemeSwitcher />
                 <LangSwitcher />

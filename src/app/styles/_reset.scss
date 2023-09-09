@@ -1,7 +1,7 @@
 /* Reset and base styles  */
 * {
-	padding: 0px;
-	margin: 0px;
+	padding: 0;
+	margin: 0;
 	border: none;
 }
 
@@ -22,6 +22,7 @@ a:focus, a:active {
 a, a:link, a:visited  {
     // color: inherit;
     text-decoration: none;
+
     /* display: inline-block; */
 }
 

@@ -27,31 +27,23 @@ module.exports = {
         "sourceType": "module"
     },
     "plugins": [
-        "@typescript-eslint",
+        "@typescript-eslint/eslint-plugin",
         "react"
     ],
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
+    "root": true,
     "rules": {
-        "indent": [
-            "error",
-            4
-        ],
-        "linebreak-style": [
-            "off",
-            "windows"
-        ],
-        "quotes": [
-            "off",
-            "single"
-        ],
-        "semi": [
-            "off",
-            "never"
-        ],
-        "no-unused-vars": ["off", {
-            "argsIgnorePattern": "^_"
-        }],
-        "@typescript-eslint/no-unused-vars": ["warn", {
-            "argsIgnorePattern": "^_"
-        }],
+        "indent": ["warn", 4],
+        "linebreak-style": "off",
+        "quotes": "off",
+        "semi": "off",
+        "no-unused-vars": ["off", { "argsIgnorePattern": "^_" }],
+        "@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
+        "react/react-in-jsx-scope": "off",
+        "react/prop-types": "off"
     }
 }
