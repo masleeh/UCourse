@@ -7,12 +7,10 @@ import type {Config} from 'jest';
 
 const config: Config = {
     clearMocks: true,
-    
     coveragePathIgnorePatterns: [
         "\\\\node_modules\\\\"
     ],
-    
-    testEnvironment: "node",
+    testEnvironment: "jsdom",
     moduleDirectories: [
         "node_modules"
     ],
@@ -28,8 +26,7 @@ const config: Config = {
     ],
     rootDir: "../../",
     testMatch: [
-        "src/**/__tests__/**/*.[jt]s?(x)",
-        "**/?(*.)+(spec|test).[tj]s?(x)"
+        "<rootDir>/**/*(*.)@(spec|test).[tj]s?(x)",
     ],
     testPathIgnorePatterns: [
         "\\\\node_modules\\\\"
@@ -39,6 +36,20 @@ const config: Config = {
         "\\.pnp\\.[^\\\\]+$"
     ],
     preset: 'ts-jest',
+    setupFilesAfterEnv: ['<rootDir>/config/jest/setupTests.ts'],
+    modulePaths: [
+        '<rootDir>',
+        '<rootDir>/src/'
+    ],
+    roots: [
+        "<rootDir>",
+        "<rootDir>/src/"
+    ],
+    moduleNameMapper: {
+        '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
+        '<rootDir>/config/jest/jestEmptyComponent.tsx',
+        '\\.s?css$': 'identity-obj-proxy',
+    },
     // All imported modules in your tests should be mocked automatically
     // automock: false,
 
@@ -106,7 +117,7 @@ const config: Config = {
     // An array of file extensions your modules use
 
     // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
-    // moduleNameMapper: {},
+    
 
     // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
     // modulePathIgnorePatterns: [],
@@ -142,9 +153,7 @@ const config: Config = {
 
 
     // A list of paths to directories that Jest should use to search for files in
-    // roots: [
-    //   "<rootDir>"
-    // ],
+    
 
     // Allows you to use a custom runner instead of Jest's default test runner
     // runner: "jest-runner",

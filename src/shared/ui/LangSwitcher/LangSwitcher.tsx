@@ -12,9 +12,7 @@ const LangSwitcher = ({
 }: ILangSwitcherProps) => {
     const { i18n } = useTranslation()
 
-    console.log(__IS_DEV__)
-
-    const toggleLanguage = () => {
+    const toggleLanguage = async () => {
         i18n.changeLanguage(i18n.resolvedLanguage === 'en' ? 'ru' : 'en')
     }
 
@@ -22,7 +20,7 @@ const LangSwitcher = ({
         <Button
             onClick={toggleLanguage}
             className={classNames(style.LangSwitcher, {}, [className])}
-        >{i18n.resolvedLanguage.toUpperCase()}</Button>
+        >{`${i18n.resolvedLanguage}`.toUpperCase()}</Button>
     )
 }
 

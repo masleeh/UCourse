@@ -46,6 +46,8 @@ module.exports = {
         "@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
         "react/react-in-jsx-scope": "off",
         "react/prop-types": "off",
-        "max-len": ["error", { "ignoreComments": true, "code": 100 }]
+        "max-len": ["error", { "ignoreComments": true, "code": 100 }],
+        "@typescript-eslint/ban-ts-comment": ["error", { "ts-ignore"
+        : "allow-with-description" }],
     }
 }
