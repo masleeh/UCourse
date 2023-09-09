@@ -4,7 +4,7 @@ export const classNames = (cls: string, mods: TMods = {}, additional: string[] =
     return [
         cls,
         ...additional.filter(Boolean),
-        Object.entries(mods)
+        ...Object.entries(mods)
             .filter(([_, value]) => Boolean(value))
             .map(([className, _]) => className)
     ].join(" ")

@@ -12,7 +12,7 @@ const config: Config = {
         "\\\\node_modules\\\\"
     ],
     
-    testEnvironment: "jsdom",
+    testEnvironment: "node",
     moduleDirectories: [
         "node_modules"
     ],
@@ -26,6 +26,19 @@ const config: Config = {
         "json",
         "node"
     ],
+    rootDir: "../../",
+    testMatch: [
+        "src/**/__tests__/**/*.[jt]s?(x)",
+        "**/?(*.)+(spec|test).[tj]s?(x)"
+    ],
+    testPathIgnorePatterns: [
+        "\\\\node_modules\\\\"
+    ],
+    transformIgnorePatterns: [
+        "\\\\node_modules\\\\",
+        "\\.pnp\\.[^\\\\]+$"
+    ],
+    preset: 'ts-jest',
     // All imported modules in your tests should be mocked automatically
     // automock: false,
 
@@ -126,7 +139,7 @@ const config: Config = {
     // restoreMocks: false,
 
     // The root directory that Jest should scan for tests and modules within
-    // rootDir: undefined,
+
 
     // A list of paths to directories that Jest should use to search for files in
     // roots: [
@@ -157,15 +170,10 @@ const config: Config = {
     // testLocationInResults: false,
 
     // The glob patterns Jest uses to detect test files
-    // testMatch: [
-    //   "**/__tests__/**/*.[jt]s?(x)",
-    //   "**/?(*.)+(spec|test).[tj]s?(x)"
-    // ],
+    
 
     // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
-    // testPathIgnorePatterns: [
-    //   "\\\\node_modules\\\\"
-    // ],
+    
 
     // The regexp pattern or array of patterns that Jest uses to detect test files
     // testRegex: [],
@@ -180,10 +188,7 @@ const config: Config = {
     // transform: undefined,
 
     // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
-    // transformIgnorePatterns: [
-    //   "\\\\node_modules\\\\",
-    //   "\\.pnp\\.[^\\\\]+$"
-    // ],
+    
 
     // An array of regexp pattern strings that are matched against all modules before the module loader will automatically return a mock for them
     // unmockedModulePathPatterns: undefined,
