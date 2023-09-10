@@ -11,6 +11,7 @@
     "lint:scss": "stylelint src",
     "lint:scss:fix": "stylelint src --fix",
     "test": "jest --config ./config/jest/jest.config.ts",
+    "test:loki": "loki test",
     "storybook": "storybook dev -p 6006 -c ./config/storybook --no-open",
     "build-storybook": "storybook build -c ./config/storybook"
   },
