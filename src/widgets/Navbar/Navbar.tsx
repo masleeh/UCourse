@@ -17,7 +17,7 @@ const Navbar = ({
         <div className={classNames(style.Navbar, {}, [className])}>
             <ThemeSwitcher />
             <AppLink theme={AppLinkTheme.secondary} to="/">{t("link-main")}</AppLink>
-            <AppLink theme={AppLinkTheme.secondary} to="/">{t("link-about")}</AppLink>
+            <AppLink theme={AppLinkTheme.secondary} to="/about">{t("link-about")}</AppLink>
         </div>
     )
 }

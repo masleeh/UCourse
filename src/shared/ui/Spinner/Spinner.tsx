@@ -10,7 +10,6 @@ const Spinner = ({
 }:ISpinnerProps) => {
     return (
         <div className={classNames('loader', {}, [className])}>
-            Spinner
         </div>
     )
 }

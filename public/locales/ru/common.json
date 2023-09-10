@@ -1,5 +1,7 @@
 {
   "link-about": "О сайте",
   "link-main": "Главная",
-  "page-not-found": "Страница не найдена"
+  "page-not-found": "Страница не найдена",
+  "refresh-page": "Обновить страницу",
+  "app-error-page": "Произошла ошибка."
 }
