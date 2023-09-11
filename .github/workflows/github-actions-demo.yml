@@ -19,7 +19,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Installing yarn
         run: npm install --global yarn@1.22.19
-      - name: Install ts-node
+      - name: Installing packages
         run: yarn install
       - name: Build production project
         run: yarn build:prod
