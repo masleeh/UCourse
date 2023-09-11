@@ -21,8 +21,6 @@ jobs:
         run: npm install -g yarn@1.22.19
       - name: Install modules
         run: yarn install
-      - name: Install typescript
-        run: yarn add global typescript
       - name: Build production project
         run: yarn build:prod
       - name: linting typescript
