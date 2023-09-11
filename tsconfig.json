@@ -21,7 +21,8 @@
         "include": [
             "**/*.tsx",
             "**/*.ts",
-        ]
+        ],
+        "esm": true
     },
     "include": [
         "./config/jest/setupTests.ts",
