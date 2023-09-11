@@ -16,8 +16,12 @@
     },
     "ts-node": {
         "compilerOptions": {
-            "module": "NodeNext"
-        }
+            "module": "CommonJS"
+        },
+        "include": [
+            "**/*.tsx",
+            "**/*.ts",
+        ]
     },
     "include": [
         "./config/jest/setupTests.ts",
