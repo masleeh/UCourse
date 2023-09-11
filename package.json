@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack serve --env port=3000 mode=development",
-    "build:prod": "TS_NODE_COMPILER_OPTIONS='{'module': 'commonjs'}' webpack --env mode=production",
+    "build:prod": "NODE_OPTIONS=\"--loader ts-node/esm\" webpack --env mode=production",
     "build:dev": "webpack --env mode=development",
     "lint": "eslint src",
     "lint:fix": "eslint src --fix",
