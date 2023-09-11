@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkucourse=self.webpackChunkucourse||[]).push([[850],{850:(s,u,e)=>{e.r(u),e.d(u,{default:()=>n});var c=e(893),r=e(809);const n=function(){return(0,c.jsxs)("div",{children:[(0,c.jsx)(r.p,{}),"INDEX PAGE"]})}}}]);
