@@ -20,8 +20,6 @@ jobs:
       - name: Installing yarn
         run: npm install --global yarn@1.22.19
       - name: Install ts-node
-        run: yarn global add ts-node
-      - name: Install modules
         run: yarn install
       - name: Build production project
         run: yarn build:prod
