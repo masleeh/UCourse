@@ -32,7 +32,7 @@ jobs:
       - name: Building Storybook
         run: yarn build-storybook
       - name: Running screenshots tests
-        run: yarn test:loki
+        run: yarn test:loki:ci
       
 
 
