@@ -3,5 +3,6 @@
   "link-about": "About",
   "page-not-found": "Page not found",
   "app-error-page": "Unexpected error just happened.",
-  "refresh-page": "Refresh page"
+  "refresh-page": "Refresh page",
+  "login_button": "Sign in"
 }
