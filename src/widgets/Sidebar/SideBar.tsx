@@ -6,6 +6,8 @@ import { LangSwitcher } from 'shared/ui/LangSwitcher';
 import ArrowRightIcon from 'shared/assets/icons/arrow-right.svg'
 import AppLink, { AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 import { useTranslation } from 'react-i18next';
+import HomeIcon from 'shared/assets/icons/home-icon.svg'
+import AboutIcon from 'shared/assets/icons/about-icon.svg'
 
 interface ISideBarProps {
     className?: string;
@@ -27,6 +29,7 @@ const SideBar = ({
             className={classNames(style.SideBar, {[style.collapsed]: collapsed}, [className])}
         >
             <div 
+                data-testid="sidebar-toggle"
                 className={style.toggle}
                 onClick={onToggle}
             >
@@ -36,8 +39,23 @@ const SideBar = ({
                     className={classNames(style.toggle_icon, {[style.icon_collapsed]: collapsed}, [])}/>
             </div>
 
-            <AppLink theme={AppLinkTheme.secondary} to="/">{t("link-main")}</AppLink>
-            <AppLink theme={AppLinkTheme.secondary} to="/about">{t("link-about")}</AppLink>
+            <AppLink
+                className={classNames(style.icon_container, {}, [])} 
+                theme={AppLinkTheme.secondary} 
+                to="/"
+            >
+                <HomeIcon width={30} height={30} className={style.icon_link_home}/>
+                <span className={classNames('', {[style.hide]: collapsed}, [])}>{t("link-main")}</span>
+            </AppLink>
+
+            <AppLink 
+                className={classNames(style.icon_container, {}, [])} 
+                theme={AppLinkTheme.secondary} 
+                to="/about"
+            >
+                <AboutIcon width={30} height={30} className={style.icon_link_about}/>
+                <span className={classNames('', {[style.hide]: collapsed}, [])}>{t("link-about")}</span>
+            </AppLink>
             
             <div className={style.switchers}>
                 <ThemeSwitcher />

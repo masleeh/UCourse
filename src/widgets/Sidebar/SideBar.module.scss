@@ -2,17 +2,19 @@
     height: calc(100vh - var(--navbar-height));
     width: 250px;
     background-color: var(--sidebar-bg-color);
-    transition: (width, background-color) 0.5s ease;
+    transition: background-color 0.5s ease, width 0.3s ease;
     position: relative;
 
     padding-top: 20px;
     display: flex;
     flex-direction: column;
+    row-gap: 10px;
 }
 
 .collapsed {
     width: 80px;
-    
+    padding-top: 70px;
+    align-items: center;
 }
 
 .switchers {
@@ -34,7 +36,7 @@
     background-color: var(--ui-color);
     border-radius: 100%;
     position: absolute;
-    right: 23px;
+    right: 21px;
     top: 20px;
 }
 
@@ -46,4 +48,24 @@
 
 .icon_collapsed {
     transform: rotate(0deg);
+}
+
+.icon_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 8px;
+}
+
+.icon_link_home {
+    fill: var(--ui-color);
+}
+
+.icon_link_about {
+    stroke: var(--ui-color);
+    stroke-width: 2px;
+}
+
+.hide {
+    display: none;
 }
