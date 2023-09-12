@@ -1,9 +1,13 @@
 .SideBar {
     height: calc(100vh - var(--navbar-height));
     width: 250px;
-    background-color: var(--inverted-bg-color);
-    transition: width 0.5s ease;
+    background-color: var(--sidebar-bg-color);
+    transition: (width, background-color) 0.5s ease;
     position: relative;
+
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .collapsed {
@@ -19,4 +23,27 @@
     align-items: center;
     row-gap: 10px;
     width: 100%;
+}
+
+.toggle {
+    padding: 7px;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--ui-color);
+    border-radius: 100%;
+    position: absolute;
+    right: 23px;
+    top: 20px;
+}
+
+.toggle_icon {
+    fill: var(--inverted-primary-color);
+    transition: all 0.4s ease;
+    transform: rotate(180deg);
+}
+
+.icon_collapsed {
+    transform: rotate(0deg);
 }

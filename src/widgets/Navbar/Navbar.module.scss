@@ -1,6 +1,7 @@
 
 .Navbar {
-    background-color: var(--inverted-bg-color);
+    background-color: var(--navbar-bg-color);
+    transition: (background-color) 0.5s ease;
     width: 100%;
     height: var(--navbar-height);
     padding: 0 50px;
