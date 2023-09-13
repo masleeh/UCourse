@@ -8,6 +8,7 @@ interface IModalProps {
     children: React.ReactNode;
     isOpen: boolean;
     onClose: () => void;
+    lazy?: boolean;
 }
 
 const ANIMATION_TIMER = 300
@@ -17,10 +18,12 @@ const Modal = (props:IModalProps) => {
         className,
         children,
         isOpen,
-        onClose
+        onClose,
+        lazy
     } = props
 
     const [isClosing, setIsClosing] = useState(false)
+    const [isMounted, setIsMounted] = useState(false)
     const timerRef = useRef<ReturnType<typeof setTimeout>>()
 
     const mods: Record<string, boolean> = {
@@ -54,12 +57,18 @@ const Modal = (props:IModalProps) => {
         }
     }, [isOpen, onKeyDown])
 
+    useEffect(() => {
+        if (isOpen) setIsMounted(true)
+    }, [isOpen])
+
+    if (lazy && !isMounted) return null
+
     return (
         <Portal>
-            <div className={classNames(style.Modal, mods, [className])}>
+            <div className={classNames(style.Modal, mods, [])}>
                 <div className={style.overlay} onClick={closeHandler}>
                     <div 
-                        className={classNames(style.content, mods, [])} onClick={onContentClick}
+                        className={classNames(style.content, mods, [className])} onClick={onContentClick}
                     >
                         {children}
                     </div>

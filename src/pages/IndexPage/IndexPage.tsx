@@ -5,7 +5,7 @@ const IndexPage = () => {
     return (
         <div>
             <BugButton />
-            <Counter />
+            {/* <Counter /> */}
         </div>
     )
 }

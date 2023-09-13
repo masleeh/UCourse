@@ -4,6 +4,8 @@
     inset: 0;
     transition: opacity 0.3s ease;
     z-index: -2;
+    color: var(--primary-color);
+    font: var(--font-m);
 }
 
 .overlay {
@@ -22,7 +24,6 @@
     padding: 20px;
     min-width: 300px;
     border-radius: 25px;
-    border: 2px solid var(--white);
     transition: 0.4s transform, opacity 0.4s ease;
     transform: translateY(200px);
     opacity: 0;

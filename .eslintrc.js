@@ -52,6 +52,7 @@ module.exports = {
         "@typescript-eslint/ban-ts-comment": ["error", { "ts-ignore"
         : "allow-with-description" }],
         "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
-        "react-hooks/exhaustive-deps": "error" // Checks effect dependencies
+        "react-hooks/exhaustive-deps": "error", // Checks effect dependencies
+        "react/display-name": 'off'
     }
 }
