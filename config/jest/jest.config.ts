@@ -1,9 +1,5 @@
-/**
- * For a detailed explanation regarding each configuration property, visit:
- * https://jestjs.io/docs/configuration
- */
-
 import type {Config} from 'jest';
+import path from 'path';
 
 const config: Config = {
     clearMocks: true,
@@ -12,19 +8,18 @@ const config: Config = {
     ],
     testEnvironment: "jsdom",
     moduleDirectories: [
-        "node_modules"
+        "node_modules",
+        "src"
     ],
     moduleFileExtensions: [
         "js",
-        "mjs",
-        "cjs",
         "jsx",
         "ts",
         "tsx",
         "json",
         "node"
     ],
-    rootDir: "../../",
+    rootDir: "../../src/",
     testMatch: [
         "<rootDir>/**/*(*.)@(spec|test).[tj]s?(x)",
     ],
@@ -33,23 +28,23 @@ const config: Config = {
     ],
     transformIgnorePatterns: [
         "\\\\node_modules\\\\",
-        "\\.pnp\\.[^\\\\]+$"
     ],
     preset: 'ts-jest',
-    setupFilesAfterEnv: ['<rootDir>/config/jest/setupTests.ts'],
+    setupFilesAfterEnv: ['<rootDir>/../config/jest/setupTests.ts'],
     modulePaths: [
-        '<rootDir>',
-        '<rootDir>/src/'
+        '<rootDir>'
     ],
     roots: [
         "<rootDir>",
-        "<rootDir>/src/"
     ],
     moduleNameMapper: {
-        '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
-        '<rootDir>/config/jest/jestEmptyComponent.tsx',
         '\\.s?css$': 'identity-obj-proxy',
+        '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
     },
+    globals: {
+        __IS_DEV__: true
+    },
+
     // All imported modules in your tests should be mocked automatically
     // automock: false,
 
@@ -107,7 +102,6 @@ const config: Config = {
     // globalTeardown: undefined,
 
     // A set of global variables that need to be available in all test environments
-    // globals: {},
 
     // The maximum amount of workers used to run your tests. Can be specified as % or a number. E.g. maxWorkers: 10% will use 10% of your CPU amount + 1 as the maximum worker number. maxWorkers: 2 will use a maximum of 2 workers.
     // maxWorkers: "50%",
